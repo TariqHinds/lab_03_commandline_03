@@ -36,7 +36,15 @@ $ touch foo.txt
 $ ls
 Copy and paste the output below.
 ----------
+Tariq@Debra MINGW64 ~
+$ cd ~/my_files
 
+Tariq@Debra MINGW64 ~/my_files
+$ touch foo.txt
+
+Tariq@Debra MINGW64 ~/my_files
+$ ls
+foo.txt
 
 
 ==========
@@ -44,7 +52,16 @@ Copy and paste the output below.
 
 $ touch bar.txt
 ----------
+Tariq@Debra MINGW64 ~/my_files
+$ touch bar.txt
 
+Tariq@Debra MINGW64 ~/my_files
+$ lsa
+bash: lsa: command not found
+
+Tariq@Debra MINGW64 ~/my_files
+$ ls
+bar.txt  foo.txt
 
 
 ==========
@@ -52,6 +69,10 @@ $ touch bar.txt
 
 Copy and paste the output below.
 ----------
+$ ls -l
+total 0
+-rw-r--r-- 1 Tariq 197609 0 Oct 20 16:35 bar.txt
+-rw-r--r-- 1 Tariq 197609 0 Oct 20 16:35 foo.txt
 
 
 
@@ -61,7 +82,12 @@ Copy and paste the output below.
 
 Write the command that you used to copy the file.  Additionally, copy and paste the output of your file listing below.
 ----------
+Tariq@Debra MINGW64 ~/my_files
+$ cp bar.txt baz.txt
 
+Tariq@Debra MINGW64 ~/my_files
+$ ls
+bar.txt  baz.txt  foo.txt
 
 
 ==========
@@ -69,6 +95,12 @@ Write the command that you used to copy the file.  Additionally, copy and paste 
 
 Write the command that you used to remove the file.  Copy and paste the output of your file listing below.
 ----------
+Tariq@Debra MINGW64 ~/my_files
+$ rm bar.txt
+
+Tariq@Debra MINGW64 ~/my_files
+$ ls
+baz.txt  foo.txt
 ==========
 11. Move the file called foo.txt to qux.txt and then list the files again.
 
@@ -76,7 +108,12 @@ Write the command that you used to remove the file.  Copy and paste the output o
 Write the command that you used to move the file.  Copy and paste the output of your file listing below.
 ----------
 
+Tariq@Debra MINGW64 ~/my_files
+$ mv foo.txt qux.txt
 
+Tariq@Debra MINGW64 ~/my_files
+$ ls
+baz.txt  qux.txt
 
 ==========
 12. Go up one directory so that you're in ~/mtec-1003-lab-03
@@ -91,14 +128,18 @@ Write the command that you used to move the file.  Copy and paste the output of 
 Write out the command that you used and what happened.
 ----------
 
-
+Tariq@Debra MINGW64 ~
+$ rmdir my_files
+rmdir: failed to remove 'my_files': Directory not empty
 
 ==========
 14. Try removing the directory called my_files using rm.
 
 Write out the command that you used and what happened.
 ----------
-
+Tariq@Debra MINGW64 ~
+$ rmdir my_files
+rmdir: failed to remove 'my_files': Directory not empty
 
 
 ==========
@@ -108,7 +149,12 @@ Force the removal of the directory and files using the -rf flag
 
 $ rm -rf my_files
 ----------
+Tariq@Debra MINGW64 ~
+$ rmdir my_files
+rmdir: failed to remove 'my_files': Directory not empty
 
+Tariq@Debra MINGW64 ~
+$ rm -rf my_files
 
 
 ==========
@@ -120,7 +166,7 @@ Use the command called cat on the file to show its contents.
 
 Describe what happened below.
 ----------
-
+My entire terminal is flooded with book content and text
 
 
 ==========
@@ -132,7 +178,17 @@ Use the command, head, on the file to show the contents of the beginning of the 
 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
+Tariq@Debra MINGW64 ~/mtec-1003-lab-03
+$ head books/other/pg1232.txt
+The Project Gutenberg EBook of The Prince, by Nicolo Machiavelli
 
+This eBook is for the use of anyone anywhere at no cost and with
+almost no restrictions whatsoever.  You may copy it, give it away or
+re-use it under the terms of the Project Gutenberg License included
+with this eBook or online at www.gutenberg.org
+
+
+Title: The Prince
 
 
 ==========
@@ -145,7 +201,18 @@ Use tail on the file to show the contents of the end of the file.
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
 
+Tariq@Debra MINGW64 ~/mtec-1003-lab-03
+$ tail books/other/pg1232.txt
 
+
+Most people start at our Web site which has the main PG search facility:
+
+     http://www.gutenberg.org
+
+This Web site includes information about Project Gutenberg-tm,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
 
 ==========
 19. Using the same file...
@@ -156,7 +223,14 @@ Use less and more on the file to show the contents of the file.  Try pressing sp
 
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
 ----------
+Tariq@Debra MINGW64 ~/mtec-1003-lab-03
+$ less books/other/pg1232.txt
 
+Tariq@Debra MINGW64 ~/mtec-1003-lab-03
+$ more books/other/pg1232.txt
+bash: more: command not found
+
+Spacebar moves the text downward and shows off it's contents while q exits the content
 
 
 ==========
@@ -170,9 +244,17 @@ Write the command that you used below.  Describe what spacebar and q does after 
 ==========
 21.  How many words are in pg1232.txt?  What command did you use to determine the word count?
 ----------
-
+cat: If it need to see all the content is loaded, then cat is a 100% way to find out
+head: If I only need to see the bare minium of content at the top
+tail if I need to see the bare minium of content at the bottom
+less: To scroll through content (spacebar) less is a viable option. q is to quit
+more: If I need to see the contents of a file at once. 
 
 
 ==========
 22.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
 ----------
+
+Tariq@Debra MINGW64 ~/mtec-1003-lab-03
+$ wc -l books/other/pg1232.txt
+5063 books/other/pg1232.txt
