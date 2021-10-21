@@ -17,7 +17,9 @@ We're going to be writing a shell script.  First, though... let's figure out wha
 
 What command did you use, and what was its output?
 ----------
-
+Tariq@Debra MINGW64 ~
+$ date
+Wed, Oct 20, 2021  5:24:27 PM
 
 
 ==========
@@ -25,7 +27,10 @@ What command did you use, and what was its output?
 
 What command did you use, and what was its output?
 ----------
-
+Tariq@Debra MINGW64 ~
+$ cal 2021
+bash: cal: command not found
+Doesn't work for windows
 
 
 ==========
@@ -33,7 +38,9 @@ What command did you use, and what was its output?
 
 What commands did you use to do this?
 ----------
-
+Tariq@Debra MINGW64 ~
+$ pwd
+/c/Users/Tariq
 
 
 ==========
@@ -41,7 +48,18 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
+Tariq@Debra MINGW64 ~
+$ mkdir copy_to_backup.sh
 
+Tariq@Debra MINGW64 ~
+$ ls
+ ansel/
+ AppData/
+'Application Data'@
+ BullseyeCoverageError.txt
+ Contacts/
+ Cookies@
+ copy_to_backup.sh
 
 
 ==========
@@ -50,6 +68,9 @@ What commands did you use to do this?
 What command did you use to find the permissions?
 ----------
 
+Tariq@Debra MINGW64 ~
+$ ls -l copy_to_backup.sh
+total 0
 
 
 ==========
@@ -57,8 +78,10 @@ What command did you use to find the permissions?
 
 What commands did you use to do this?  What was the output?
 ----------
+Tariq@Debra MINGW64 ~
+$ chmod u+x copy_to_backup.sh
 
-
+Nothing. 
 
 ==========
 7. Try executing the file!
@@ -67,7 +90,7 @@ $ ./copy_to_backup.sh
 
 What command did you use to try to execute the file?  What happens?
 ----------
-
+The file loads and the terminal shows off it's progress. 
 
 
 ==========
@@ -75,7 +98,7 @@ What command did you use to try to execute the file?  What happens?
 
 What command did you use to do this?
 ----------
-
+$ nano copy_to_backup.sh
 
 
 ==========
@@ -87,17 +110,30 @@ c. print out "I'm done backing up"
 
 Write out the code in your file below...
 ----------
-
+mkdir -p backup
+cp *.txt backup
+echo "I'm done backing up"
 
 
 ==========
 10. Create a directory in your home called test
 ----------
+Tariq@Debra MINGW64 ~
+$ mkdir test
 ==========
 11. Go into that directory and create two empty files... 1.txt and 2.txt
 
 What commands did you use to do this?
 ----------
+Tariq@Debra MINGW64 ~/test
+$ touch 1.txt
+
+Tariq@Debra MINGW64 ~/test
+$ touch 2.txt
+
+Tariq@Debra MINGW64 ~/test
+$ ls
+1.txt  2.txt
 
 
 
@@ -106,7 +142,15 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
+Tariq@Debra MINGW64 ~/test
+$ mv copy_to_backup.sh test
+mv: cannot stat 'copy_to_backup.sh': No such file or directory
 
+Tariq@Debra MINGW64 ~/test
+$ mv copy_to_backup.sh 1.txt
+mv: cannot stat 'copy_to_backup.sh': No such file or directory
+
+I'm stuck
 
 
 ==========
@@ -114,7 +158,7 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
-
+I'm stuck
 
 
 ==========
@@ -122,3 +166,13 @@ What commands did you use to do this?
 
 What commands did you use to do this?  Show the output.
 ----------
+Tariq@Debra MINGW64 ~
+$ pwd
+/c/Users/Tariq
+
+Tariq@Debra MINGW64 ~
+$ ls
+ ansel/
+ AppData/
+'Application Data'@
+ backup/
